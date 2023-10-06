@@ -1,0 +1,56 @@
+body {
+    background: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+}
+
+header {
+    background: #b84545;
+}
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: white;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+article {
+    background: #f3a1a1;
+    color: rgb(59, 56, 97);
+    margin: 20px;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+article p {
+    margin: 5px 0;
+}
+
+article h2 {
+    margin: 0 0 10px 0;
+}
+
+.armchair-nb {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
