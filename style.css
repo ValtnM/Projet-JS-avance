@@ -55,3 +55,33 @@ article h2 {
     margin-top: 10px;
     font-size: 0.8em;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+.page {
+    width: 30px;
+    text-align: center;
+    border: 1px solid rgb(59, 56, 97);
+    background: #dfe2f8;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 2px;
+    list-style-type: none;
+
+}
+
+.page-link {
+    text-decoration: none;
+    color: rgb(59, 56, 97);
+}
+
+.selected {
+    background: rgb(59, 56, 97);
+}
+
+.selected a {
+    color: white;
+}

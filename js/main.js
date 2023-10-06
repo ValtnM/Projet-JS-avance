@@ -1,12 +1,14 @@
-import { getCinemas } from "./module/cinemas.js";
+import { getCinemas, displayCinemasList } from "./module/cinemas.js";
+import { createPagination } from "./module/pagination.js";
 
+const main = () => {
+  // Affichage des cinémas
+  getCinemas().then((cinemas) => {
+    displayCinemasList(cinemas);
+  });
 
-
-
-const main = async () => {
-    // const {latitude, longitude} = await getUserCoords();
-    // console.log(latitude);
-    getCinemas();
-}
+  // Création de la pagination
+  createPagination();
+};
 
 main();
