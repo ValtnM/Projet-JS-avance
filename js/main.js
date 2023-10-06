@@ -1,3 +1,12 @@
 import { getCinemas } from "./module/cinemas.js";
 
-getCinemas();
+
+
+
+const main = async () => {
+    // const {latitude, longitude} = await getUserCoords();
+    // console.log(latitude);
+    getCinemas();
+}
+
+main();

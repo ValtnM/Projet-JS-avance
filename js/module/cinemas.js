@@ -1,3 +1,6 @@
+import { getUserCoords } from "./location.js";
+import { haversine } from "./utils/math.js";
+
 const elements = {
   cinemasList: document.querySelector(".cinemas-list"),
 };
@@ -8,16 +11,23 @@ export const getCinemas = () => {
     .then((res) => displayCinemas(res.results));
 };
 
-export const displayCinemas = (cinemasList) => {
+export const displayCinemas = async (cinemasList) => {
+  const userCoords = await getUserCoords();
+
   let htmlElement = "";
 
   cinemasList.forEach((cinema) => {
+    const cinemaCoords = [cinema.latitude, cinema.longitude];
+
+    const distance = haversine(userCoords, cinemaCoords);
+
     htmlElement += `
               <article>
                   <h2>${cinema.nom}</h2>
                   <p>${cinema.adresse}</p>
                   <p>${cinema.code_insee} ${cinema.commune}</p>
                   <p class="armchair-nb">Nombre de fauteuils : ${cinema.fauteuils}</p>
+                  <p class="distance">Distance : ${Math.round(distance)} km</p>
               </article>
           `;
   });
